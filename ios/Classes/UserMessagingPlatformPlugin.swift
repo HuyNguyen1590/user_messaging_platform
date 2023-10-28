@@ -150,6 +150,7 @@ private func serializeConsentInfo(_ info: UMPConsentInformation) -> [String: Str
 
 extension UMPConsentStatus: CustomStringConvertible {
     public var description: String {
+
         switch self {
         case .unknown:
             return "unknown";
@@ -160,13 +161,14 @@ extension UMPConsentStatus: CustomStringConvertible {
         case .obtained:
             return "obtained";
         @unknown default:
-            fatalError()
+            return "unknown";
         }
     }
 }
 
 extension UMPFormStatus: CustomStringConvertible {
     public var description: String {
+
         switch self {
         case .unknown:
             return "unknown";
@@ -175,13 +177,14 @@ extension UMPFormStatus: CustomStringConvertible {
         case .unavailable:
             return "unavailable";
         @unknown default:
-            fatalError()
+            return "unknown";
         }
     }
 }
 
 extension UMPRequestErrorCode: CustomStringConvertible {
     public var description: String {
+
         switch self {
         case .internal:
             return "internal";
@@ -192,13 +195,14 @@ extension UMPRequestErrorCode: CustomStringConvertible {
         case .network:
             return "network";
         @unknown default:
-            fatalError()
+            return "misconfiguration";
         }
     }
 }
 
 extension UMPFormErrorCode: CustomStringConvertible {
     public var description: String {
+
         switch self {
         case .internal:
             return "internal";
@@ -209,7 +213,7 @@ extension UMPFormErrorCode: CustomStringConvertible {
         case .unavailable:
             return "unavailable";
         @unknown default:
-            fatalError()
+            return "unavailable";
         }
     }
 }
@@ -218,6 +222,7 @@ extension UMPFormErrorCode: CustomStringConvertible {
 extension ATTrackingManager.AuthorizationStatus: CustomStringConvertible {
     public var description: String {
         switch self {
+
         case .authorized:
             return "authorized";
         case .denied:
@@ -227,7 +232,7 @@ extension ATTrackingManager.AuthorizationStatus: CustomStringConvertible {
         case .restricted:
             return "restricted";
         @unknown default:
-            fatalError()
+            return "notDetermined";
         }
     }
 }
