@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
               // UMP
               Text(
                 'User Messaging Platform',
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
               SizedBox(height: 16),
               if (_consentInformation == null)
@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 32),
                 Text(
                   'App Tracking Transparency',
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 SizedBox(height: 16),
                 if (_trackingAuthorizationStatus == null)
